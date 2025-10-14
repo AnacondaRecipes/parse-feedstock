@@ -1,5 +1,5 @@
 {% set name = "parse" %}
-{% set version = "1.19.1" %}
+{% set version = "1.20.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,8 +7,8 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cc3a47236ff05da377617ddefa867b7ba983819c664e1afe46249e5b469be464
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: b41d604d16503c79d81af5165155c0b20f6c8d6c559efa66b4b695c3e5a0a0ce
 
 build:
   number: 0
@@ -18,8 +18,7 @@ requirements:
   host:
     - pip
     - python
-    - setuptools
-    - wheel
+    - setuptools >=61.2
   run:
     - python
 
